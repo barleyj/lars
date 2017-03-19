@@ -2,6 +2,7 @@
 Python script to record livestreams from Twitch.
 
 Uses the [pythonNotify](https://github.com/mtverlee/pythonNotify) module to send notifications.
+Uses [Livestreamer](http://docs.livestreamer.io/#) to record livestreams.
 
 ## Installation
 To install this script, run the following command in a terminal with privileges.
