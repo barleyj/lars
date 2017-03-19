@@ -6,7 +6,7 @@ Uses the [pythonNotify](https://github.com/mtverlee/pythonNotify) module to send
 ## Installation
 To install this script, run the following command in a terminal with privileges.
 ```
-git clone https://github.com/mtverlee/Lars.git --recursive
+git clone https://github.com/mtverlee/lars.git --recursive
 sudo chmod a+x *.sh
 ./install.sh
 ```
