@@ -1,4 +1,4 @@
-# Lars
+# lars
 Python script to record livestreams from Twitch.
 
 Uses the [pythonNotify](https://github.com/mtverlee/pythonNotify) module to send notifications.
