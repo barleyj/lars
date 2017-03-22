@@ -20,6 +20,8 @@ import urllib2
 import traceback
 import datetime
 import notifications.main as notifications
+import better_exceptions
+better_exceptions.MAX_LENGTH = None
 
 # Settings.
 appToken = ""
