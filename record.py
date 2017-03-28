@@ -30,6 +30,8 @@ twitchAPIKey = ""
 periodInMinutes = 5
 minRecordPeriodInMinutes = 10
 streamers = []
+# Available quality settings:  audio, source, high, low, medium, mobile
+recordQuality = 'medium'
 
 
 # Definitions.
@@ -102,7 +104,7 @@ def recordStream(name, locks):
 		if not os.access(path, os.W_OK):
 			print(colored(badPermissionsMessage, 'red'))
 		totalPath = path + dateTimeNow + ".mp4"
-		cmd = "livestreamer --yes-run-as-root --hds-segment-attempts=5 --hds-segment-threads=10 --http-header=Client-ID=%s http://www.twitch.tv/%s high --output %s" % (twitchAPIKey, name, totalPath)
+		cmd = "livestreamer --yes-run-as-root --hds-segment-attempts=5 --hds-segment-threads=10 --http-header=Client-ID=%s http://www.twitch.tv/%s %s --output %s" % (twitchAPIKey, name, recordQuality, totalPath)
 		os.system(cmd)
 		if os.path.isfile(totalPath):
 			notifications.sendPushoverNotification(appToken, userToken, 'A livestream by streamer "' + name + '" has been recorded.', 'Livestreams')
