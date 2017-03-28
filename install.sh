@@ -8,3 +8,4 @@ pip install termcolor
 pip install requests
 pip install better_exceptions
 sudo rm get-pip.py
+echo "Installation completed!"
